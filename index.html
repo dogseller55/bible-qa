@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>낙원과 강도의 고백 — 십자가 위에서 완성된 은혜</title>
+<meta property="og:title" content="낙원과 강도의 고백">
+<meta property="og:description" content="예수님이 십자가에서 강도에게 약속하신 낙원은 어디인가? 그 고백은 공로인가, 은혜인가?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0d0d;
+    --bg2: #141414;
+    --bg3: #1a1a1a;
+    --bg4: #222222;
+    --gold: #c9a96e;
+    --gold-light: #e8c98a;
+    --gold-dim: #8a6e42;
+    --white: #f0ece4;
+    --white-dim: #a09890;
+    --red: #c0392b;
+    --green: #27ae60;
+    --border: #2a2a2a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    line-height: 1.9;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── 헤더 ── */
+  header {
+    position: relative;
+    padding: 80px 40px 60px;
+    max-width: 820px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .header-top-line {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, transparent 100%);
+  }
+
+  .series-tag {
+    display: inline-block;
+    border: 1px solid var(--gold-dim);
+    color: var(--gold);
+    font-size: 11px;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: 0.15em;
+    padding: 4px 12px;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+  }
+
+  .header-left-line {
+    position: absolute;
+    left: 40px;
+    top: 110px;
+    width: 3px;
+    background: linear-gradient(180deg, var(--gold) 0%, transparent 100%);
+    height: 160px;
+  }
+
+  header h1 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 900;
+    line-height: 1.3;
+    padding-left: 20px;
+    margin-bottom: 12px;
+  }
+
+  header h1 span.gold { color: var(--gold-light); }
+
+  header .subtitle {
+    font-size: 14px;
+    color: var(--white-dim);
+    padding-left: 20px;
+    margin-bottom: 28px;
+    letter-spacing: 0.03em;
+  }
+
+  .meta-row {
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+    color: var(--white-dim);
+    padding-left: 20px;
+  }
+
+  .meta-row span::before { content: '· '; color: var(--gold-dim); }
+
+  /* ── TOC ── */
+  .toc {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 40px 40px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .toc-title {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .toc-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .toc-list li a {
+    color: var(--white-dim);
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: color 0.2s;
+  }
+
+  .toc-list li a:hover { color: var(--gold-light); }
+
+  .toc-num {
+    font-size: 11px;
+    color: var(--gold-dim);
+    font-family: 'Noto Serif KR', serif;
+    min-width: 24px;
+  }
+
+  /* ── 메인 ── */
+  main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+  }
+
+  /* ── 섹션 ── */
+  .section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-num {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: #1e1e1e;
+    line-height: 1;
+    margin-bottom: -10px;
+    letter-spacing: -0.02em;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ── 질문 블록 ── */
+  .question-block {
+    background: var(--bg2);
+    border-left: 3px solid var(--gold);
+    padding: 20px 24px;
+    margin-bottom: 32px;
+    font-size: 15px;
+    color: var(--white-dim);
+    font-style: italic;
+  }
+
+  .question-block::before {
+    content: 'Q.';
+    font-family: 'Noto Serif KR', serif;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--gold);
+    margin-right: 8px;
+  }
+
+  /* ── 본문 ── */
+  p { margin-bottom: 20px; font-size: 15.5px; color: #d4cfc8; }
+
+  h3 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--white);
+    margin: 36px 0 14px;
+  }
+
+  h3::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    margin-right: 10px;
+    vertical-align: middle;
+    transform: rotate(45deg);
+  }
+
+  /* ── 테이블 ── */
+  .table-wrap { overflow-x: auto; margin: 28px 0; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  thead tr {
+    background: var(--bg4);
+    border-bottom: 1px solid var(--gold-dim);
+  }
+
+  thead th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 700;
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+
+  tbody tr { border-bottom: 1px solid var(--border); }
+  tbody tr:hover { background: var(--bg2); }
+
+  tbody td {
+    padding: 14px 16px;
+    vertical-align: top;
+    color: #ccc;
+  }
+
+  tbody td:first-child {
+    font-weight: 700;
+    color: var(--white);
+    white-space: nowrap;
+  }
+
+  /* ── 성경 인용 ── */
+  .scripture {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--gold-dim);
+    padding: 24px 28px;
+    margin: 28px 0;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--gold-light);
+    position: relative;
+  }
+
+  .scripture .ref {
+    display: block;
+    font-size: 11px;
+    color: var(--gold-dim);
+    margin-top: 10px;
+    letter-spacing: 0.1em;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+
+  /* ── 비유 박스 ── */
+  .analogy-box {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 24px 28px;
+    margin: 28px 0;
+    position: relative;
+  }
+
+  .analogy-box::before {
+    content: '비유';
+    position: absolute;
+    top: -1px; left: 20px;
+    background: var(--gold-dim);
+    color: var(--bg);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 2px 10px;
+  }
+
+  .analogy-box p { color: var(--white-dim); font-size: 14.5px; margin-bottom: 12px; }
+  .analogy-box p:last-child { margin-bottom: 0; }
+
+  /* ── 콜아웃 ── */
+  .callout {
+    display: flex;
+    gap: 14px;
+    padding: 18px 22px;
+    margin: 28px 0;
+    border-radius: 2px;
+    font-size: 14px;
+  }
+
+  .callout.info { background: #1a1810; border: 1px solid #3d3010; color: #d4c080; }
+  .callout.warn { background: #1a1010; border: 1px solid #3d1010; color: #d48080; }
+  .callout.ok   { background: #101a10; border: 1px solid #103d10; color: #80d480; }
+
+  .callout-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+
+  /* ── 흐름도 ── */
+  .flow {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 28px 0;
+    flex-wrap: wrap;
+  }
+
+  .flow-item {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    padding: 12px 18px;
+    font-size: 13px;
+    text-align: center;
+    color: var(--white);
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .flow-arrow {
+    color: var(--gold-dim);
+    font-size: 18px;
+    padding: 0 6px;
+    flex-shrink: 0;
+  }
+
+  /* ── 결론 섹션 ── */
+  .conclusion-section {
+    padding: 60px 0 40px;
+  }
+
+  .conclusion-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 36px;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── 요약 카드 ── */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .summary-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--gold);
+    padding: 22px 20px;
+  }
+
+  .summary-card .card-num {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: #1e1e1e;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .summary-card .card-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .summary-card .card-body {
+    font-size: 13px;
+    color: var(--white-dim);
+    line-height: 1.7;
+  }
+
+  /* ── 신학 결론 박스 ── */
+  .theology-box {
+    background: var(--bg2);
+    border: 1px solid var(--gold-dim);
+    padding: 36px 40px;
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+  }
+
+  .theology-box::before, .theology-box::after {
+    content: '';
+    position: absolute;
+    left: 20px; right: 20px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+  }
+
+  .theology-box::before { top: 10px; }
+  .theology-box::after  { bottom: 10px; }
+
+  .theology-box blockquote {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 17px;
+    line-height: 1.9;
+    color: var(--gold-light);
+    font-style: italic;
+    margin-bottom: 12px;
+  }
+
+  .theology-box cite {
+    font-size: 12px;
+    color: var(--gold-dim);
+    letter-spacing: 0.1em;
+  }
+
+  /* ── 족보 시각화 ── */
+  .lineage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 32px 0;
+  }
+
+  .lineage-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .lineage-node {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    padding: 10px 20px;
+    font-size: 13px;
+    text-align: center;
+    min-width: 100px;
+    position: relative;
+  }
+
+  .lineage-node.highlight {
+    border-color: var(--gold-dim);
+    color: var(--gold-light);
+  }
+
+  .lineage-connector {
+    width: 1px;
+    height: 24px;
+    background: var(--border);
+    margin: 0 auto;
+  }
+
+  /* ── 비교 박스 ── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    margin: 28px 0;
+    border: 1px solid var(--border);
+  }
+
+  .compare-col {
+    background: var(--bg2);
+    padding: 22px 24px;
+  }
+
+  .compare-col .col-label {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .compare-col.before .col-label { color: #c0392b; }
+  .compare-col.after  .col-label { color: #27ae60; }
+
+  .compare-col p { font-size: 14px; color: var(--white-dim); line-height: 1.7; }
+
+  /* ── 푸터 ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 40px;
+    max-width: 820px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: var(--white-dim);
+    position: relative;
+  }
+
+  footer::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 40%, transparent 100%);
+  }
+
+  /* ── 반응형 ── */
+  @media (max-width: 600px) {
+    header, .toc, main, footer { padding-left: 24px; padding-right: 24px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .flow { flex-direction: column; }
+    .flow-arrow { transform: rotate(90deg); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════ HEADER ══════════ -->
+<header>
+  <div class="header-top-line"></div>
+  <div class="header-left-line"></div>
+  <div class="series-tag">성경 질문·답변 시리즈</div>
+  <h1>낙원과 강도의 고백<br><span class="gold">십자가 위에서 완성된 은혜</span></h1>
+  <p class="subtitle">누가복음 23:43 — παράδεισος (파라데이소스) · 공로와 믿음 · 유효적 부르심</p>
+  <div class="meta-row">
+    <span>개혁주의 신학</span>
+    <span>은혜론 · 구원론</span>
+    <span>누가복음 23장</span>
+  </div>
+</header>
+
+<!-- ══════════ TOC ══════════ -->
+<nav class="toc">
+  <div class="toc-title">목차</div>
+  <ul class="toc-list">
+    <li><a href="#q1"><span class="toc-num">01</span>낙원(παράδεισος)은 천국인가?</a></li>
+    <li><a href="#q2"><span class="toc-num">02</span>강도의 고백은 공로가 아닌가?</a></li>
+    <li><a href="#q3"><span class="toc-num">03</span>공로와 믿음의 결정적 차이</a></li>
+    <li><a href="#q4"><span class="toc-num">04</span>'공로'는 항상 부정적인 개념인가?</a></li>
+    <li><a href="#conclusion"><span class="toc-num">결론</span>십자가 위 은혜의 신학</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════ MAIN ══════════ -->
+<main>
+
+  <!-- ── Q1 ── -->
+  <section class="section" id="q1">
+    <div class="section-num">01</div>
+    <h2 class="section-title">낙원(παράδεισος)은 천국인가?</h2>
+
+    <div class="question-block">
+      예수님이 십자가 상에서 "네가 낙원에 있으리라" 말씀하신 그 낙원은 어떤 곳이야? 천국을 말하는 거야?
+    </div>
+
+    <p>같은 곳이기도 하고, 완전히 동일한 곳은 아니기도 합니다. 정확히는 이렇게 구분됩니다: <strong>낙원은 그리스도와 함께 있는 하나님의 임재 공간</strong>, 즉 '중간 상태의 하늘'이고, 최종 천국은 부활 후 완성된 새 하늘과 새 땅입니다.</p>
+
+    <h3>헬라어 원어 — παράδεισος</h3>
+
+    <p>예수님이 쓰신 단어는 <strong>파라데이소스(παράδεισος)</strong>입니다. 원래 페르시아어에서 온 말로, 왕의 정원·울타리 쳐진 동산을 뜻합니다. 칠십인역(LXX)이 에덴동산을 이 단어로 번역했으며, 신약에는 딱 세 번 등장합니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>본문</th><th>내용</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>눅 23:43</td><td>"오늘 네가 나와 함께 낙원에 있으리라"</td></tr>
+          <tr><td>고후 12:4</td><td>바울이 이끌려 올라간 "낙원" — 형언할 수 없는 말을 들음</td></tr>
+          <tr><td>계 2:7</td><td>이기는 자에게 "하나님의 낙원에 있는 생명나무"</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>"오늘"이라는 단어가 핵심</h3>
+
+    <div class="scripture">
+      "오늘 네가 나와 함께 낙원에 있으리라"
+      <span class="ref">누가복음 23:43</span>
+    </div>
+
+    <p>예수님은 <strong>"오늘"</strong>이라고 하셨습니다. 그 강도는 그날 죽었고, 몸의 부활은 아직 미래입니다. 즉, 낙원은 <strong>몸의 부활 이전에, 죽자마자 가는 곳</strong>입니다. 이것을 신학에서 <strong>중간 상태(Intermediate State)</strong>라고 부릅니다.</p>
+
+    <div class="analogy-box">
+      <p>왕이 잔치를 준비하고 있습니다. 잔치는 아직 시작 전입니다. 그런데 왕의 친구는 이미 왕궁 안에 들어와 왕과 함께 있습니다.</p>
+      <p><strong>지금 왕궁 안에 있는 것</strong> = 낙원 (중간 상태, 그리스도와 함께)<br>
+         <strong>잔치가 시작된 것</strong> = 최후 부활 후 새 하늘과 새 땅 (최종 천국)</p>
+      <p>낙원은 대기실이 아닙니다. 이미 왕과 함께 있는 <strong>충만한 복락의 공간</strong>입니다.</p>
+    </div>
+
+    <h3>개혁주의 관점 정리</h3>
+
+    <p>웨스트민스터 신앙고백 32장 1항은 이렇게 말합니다: "의인의 영혼은 죽을 때에 완전히 거룩하게 되어, 지극히 높은 하늘에서 하나님의 얼굴을 빛 가운데 바라보며 몸의 완전한 구속을 기다린다."</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>구분</th><th>내용</th></tr></thead>
+        <tbody>
+          <tr><td>✅ 맞다</td><td>하나님의 임재가 있는 실재하는 복락의 공간</td></tr>
+          <tr><td>✅ 맞다</td><td>그리스도와 의식적으로 함께 있는 상태 (빌 1:23)</td></tr>
+          <tr><td>❌ 아니다</td><td>무의식 상태나 "영혼수면" — 재세례파 일부 견해, 개혁주의는 부정</td></tr>
+          <tr><td>❌ 아니다</td><td>최종 부활 후 완성된 새 창조와 완전히 동일한 상태</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout ok">
+      <span class="callout-icon">✦</span>
+      <div>강도에게 하신 말씀의 의미: 그는 세례도, 선행도, 교회 생활도 없었습니다. 오직 한 마디뿐이었습니다. "오늘, 나와 함께"라는 약속은 <strong>Sola Gratia(오직 은혜)</strong>를 십자가 위에서 가장 극적으로 보여준 장면입니다.</div>
+    </div>
+  </section>
+
+  <!-- ── Q2 ── -->
+  <section class="section" id="q2">
+    <div class="section-num">02</div>
+    <h2 class="section-title">강도의 고백은 공로가 아닌가?</h2>
+
+    <div class="question-block">
+      그 강도는 모두가 육신의 눈으로는 예수님을 부인할 수밖에 없던 그 타이밍에 고백을 했잖아. 이것을 강도의 공로로 볼 수 있지 않을까?
+    </div>
+
+    <p>정말 날카로운 질문입니다. 그리고 이 질문은 단순한 트집이 아니라 <strong>구원론의 핵심</strong>을 건드립니다.</p>
+
+    <h3>질문의 전제가 포착한 것</h3>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>그 자리에 있던 사람들</th><th>반응</th></tr></thead>
+        <tbody>
+          <tr><td>제자들</td><td>도망쳤습니다</td></tr>
+          <tr><td>군중</td><td>조롱했습니다</td></tr>
+          <tr><td>종교 지도자들</td><td>"남은 구원했으면서 자기는 못 구하는가" 비웃었습니다</td></tr>
+          <tr><td>로마 군인들</td><td>그냥 집행인이었습니다</td></tr>
+          <tr><td><strong>오른편 강도</strong></td><td><strong>"당신의 나라에 임하실 때 나를 기억하소서"</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>맞습니다. 그 상황에서 그 고백은 <strong>육신의 눈으로는 도저히 나올 수 없는 것</strong>이었습니다.</p>
+
+    <h3>그런데 바로 그게 문제입니다</h3>
+
+    <div class="callout info">
+      <span class="callout-icon">◈</span>
+      <div>핵심 질문: 그 순간 그 눈이 열린 것 — 그것이 강도 자신의 통찰력이었을까요, 아니면 하나님이 그 눈을 여신 것일까요?</div>
+    </div>
+
+    <p>바로 옆에 <strong>또 다른 강도</strong>가 있었습니다(눅 23:39). 같은 십자가, 같은 자리, 같은 시간, 같은 예수님. 그는 끝까지 조롱했습니다.</p>
+
+    <div class="analogy-box">
+      <p>두 사람이 같은 폭풍 속에 있습니다. 한 명은 폭풍 너머를 봅니다. 한 명은 폭풍만 봅니다.</p>
+      <p>그 차이는 한 사람의 <strong>눈이 더 좋아서</strong>일까요, 아니면 <strong>누군가가 그의 눈을 열어줬기 때문</strong>일까요?</p>
+      <p>개혁주의는 후자라고 답합니다.</p>
+    </div>
+
+    <h3>칼빈의 답 — 유효적 부르심(Effectual Calling)</h3>
+
+    <p>칼빈은 이것을 <strong>유효적 부르심(Effectual Calling)</strong>이라고 불렀습니다. 하나님은 자신이 구원하기로 작정한 자를, 그가 어떤 상황에 있든, 어떤 타이밍이든 반드시 그 마음을 여십니다.</p>
+
+    <div class="flow">
+      <div class="flow-item">하나님의 선택</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-item">성령의 역사<br><small>(눈을 여심)</small></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-item">강도의 고백</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-item">그리스도의<br>선언</div>
+    </div>
+
+    <div class="callout ok">
+      <span class="callout-icon">✦</span>
+      <div>그 강도의 탁월한 고백은 <strong>공로의 증거</strong>가 아니라, <strong>은혜의 주권성에 대한 가장 강력한 증거</strong>입니다. 인간의 공로가 구원을 만든다면 "역시 대단한 사람이었어"로 끝납니다. 은혜가 구원을 만든다면 "저 불가능한 상황에서도 하나님이 일하셨어"가 됩니다.</div>
+    </div>
+  </section>
+
+  <!-- ── Q3 ── -->
+  <section class="section" id="q3">
+    <div class="section-num">03</div>
+    <h2 class="section-title">공로와 믿음의 결정적 차이</h2>
+
+    <div class="question-block">
+      "공로와 믿음의 결정적 차이" 표현이 잘 이해가 안 가. 특히 '믿음의 질'이 공로가 되지 않는다는 것을 더 쉽게 설명해줘.
+    </div>
+
+    <p>세 개념을 하나씩 풀어보겠습니다.</p>
+
+    <h3>1. 공로(Merit) — 하나님이 갚아야 할 빚을 만드는 것</h3>
+
+    <p>쉽게 말하면 이렇습니다: "내가 뭔가를 했으니까, 하나님이 나를 구원해 줘야 한다." 마치 직원이 일을 하면 월급을 받을 권리가 생기듯, 내 행위가 하나님에게 채무를 만드는 개념입니다.</p>
+
+    <div class="compare-grid">
+      <div class="compare-col before">
+        <div class="col-label">공로 구원론</div>
+        <p>내가 했다 → 하나님이 갚아야 한다<br>내 고백·행위가 구원의 <strong>근거</strong>가 된다</p>
+      </div>
+      <div class="compare-col after">
+        <div class="col-label">은혜 구원론</div>
+        <p>하나님이 주셨다 → 나는 받았다<br>그리스도의 사역이 구원의 <strong>근거</strong>이다</p>
+      </div>
+    </div>
+
+    <h3>2. 믿음(Faith) — 받는 손</h3>
+
+    <p>믿음은 내가 뭔가를 만들어내는 게 아닙니다. 선물이 이미 있고, 나는 그걸 <strong>받는 손을 내밀었을 뿐</strong>입니다. 손을 내밀었다고 해서 선물을 번 게 아닙니다. 믿음이 구원을 만드는 게 아니라, 이미 완성된 그리스도의 구원을 받아드는 통로입니다.</p>
+
+    <h3>3. 믿음의 질 — 가장 많이 오해하는 부분</h3>
+
+    <div class="callout warn">
+      <span class="callout-icon">△</span>
+      <div>흔한 오해: "믿음이 크고 깊고 탁월하면, 그게 공로 아닌가?"</div>
+    </div>
+
+    <div class="analogy-box">
+      <p>병원에 갔습니다. 의사가 주사를 놓아줍니다.</p>
+      <p>• 주사를 맞겠다고 <strong>팔을 내민 것</strong> = 믿음<br>
+         • 주사 속 <strong>약</strong> = 그리스도의 구원</p>
+      <p>팔을 아주 힘차게 내밀었든, 떨면서 내밀었든, 병을 고치는 것은 <strong>약</strong>이지 팔을 내미는 행위의 질이 아닙니다.</p>
+      <p>그 강도의 고백이 탁월했다 해도, 그를 구원한 것은 <strong>그리스도</strong>이지 고백의 탁월함이 아닙니다.</p>
+    </div>
+
+    <div class="scripture">
+      "너희는 그 은혜에 의하여 믿음으로 말미암아 구원을 받았으니 이것은 너희에게서 난 것이 아니요 하나님의 선물이라"
+      <span class="ref">에베소서 2:8 — 헬라어 τοῦτο(투토, "이것")는 믿음 자체를 포함한 구원 전체를 가리킨다</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>구분</th><th>내용</th></tr></thead>
+        <tbody>
+          <tr><td>공로(Merit)</td><td>구원의 <em>근거</em>가 되는 것. 하나님이 갚아줘야 할 빚을 만드는 것</td></tr>
+          <tr><td>믿음(Faith)</td><td>구원을 <em>받는 손</em>. 근거가 아니라 통로</td></tr>
+          <tr><td>믿음의 질</td><td>믿음이 크고 탁월해도, 구원의 근거는 여전히 <strong>그리스도</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout ok">
+      <span class="callout-icon">✦</span>
+      <div>한 문장 요약: <strong>믿음은 구원의 이유가 아니라 구원을 받아드는 방식입니다. 이유는 오직 그리스도입니다.</strong></div>
+    </div>
+  </section>
+
+  <!-- ── Q4 ── -->
+  <section class="section" id="q4">
+    <div class="section-num">04</div>
+    <h2 class="section-title">'공로'는 항상 부정적인 개념인가?</h2>
+
+    <div class="question-block">
+      그렇다면 '공로'라는 개념 자체는 부정적인 것으로만 봐야 하는 건가? 공로가 나쁜 개념이라면, 착하게 사는 것도 의미가 없는 건가?
+    </div>
+
+    <p>아닙니다. 개혁주의 신학은 <strong>공로 개념 자체를 부정하지 않습니다.</strong> 오히려 공로라는 개념 없이는 복음이 성립되지 않습니다. 문제는 <strong>누구의 공로인가</strong>입니다.</p>
+
+    <h3>공로의 세 가지 범주</h3>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>범주</th><th>내용</th><th>개혁주의 평가</th></tr></thead>
+        <tbody>
+          <tr><td><strong>그리스도의 공로</strong></td><td>율법을 완전히 지키심 (능동적 순종) + 십자가에서 죽으심 (수동적 순종)</td><td>✅ 구원의 전적인 근거. 반드시 긍정</td></tr>
+          <tr><td><strong>인간의 공로</strong> (칭의 앞에서)</td><td>내 행위·고백·믿음의 질로 구원을 얻으려는 것</td><td>❌ 완전히 배제. 성경이 명시적으로 부정</td></tr>
+          <tr><td><strong>선행의 열매</strong> (칭의 이후)</td><td>구원받은 자가 감사로 살아내는 삶</td><td>✅ 반드시 필요. 단, 구원의 근거가 아닌 증거</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>그리스도의 공로 — 개혁주의의 핵심</h3>
+
+    <p>개혁주의 신학에는 <strong>메리툼 크리스티(meritum Christi, 그리스도의 공로)</strong>라는 중심 개념이 있습니다. 예수님은 태어나서 죽으시기까지 율법을 완벽하게 지키셨습니다. 이 완전한 순종이 <strong>공로</strong>를 만들었고, 그 공로가 믿는 자에게 전가됩니다. 이것을 <strong>의의 전가(Imputation of Righteousness)</strong>라고 합니다.</p>
+
+    <div class="scripture">
+      "한 사람의 순종하지 아니함으로 많은 사람이 죄인 된 것같이<br>
+      한 사람의 순종하심으로 많은 사람이 의인이 되리라"
+      <span class="ref">로마서 5:19 — 그리스도의 '순종', 즉 공로가 전가됨을 명시</span>
+    </div>
+
+    <div class="analogy-box">
+      <p>통장에 돈이 없는 사람이 있습니다. 그런데 누군가가 자기 돈을 그 사람 통장에 넣어줬습니다.</p>
+      <p>이제 그 사람은 <strong>자기 돈</strong>은 없지만, <strong>통장에는 돈이 있습니다.</strong></p>
+      <p>그리스도의 공로가 우리에게 전가된다는 것이 이 구조입니다. 우리에게 공로가 생긴 게 아니라, 그리스도의 공로가 우리 것으로 계산됩니다. 이것이 <strong>의의 전가</strong>입니다.</p>
+    </div>
+
+    <h3>그렇다면 착하게 사는 것은 의미가 없는가?</h3>
+
+    <p>전혀 그렇지 않습니다. 개혁주의는 여기서 결정적인 구분을 합니다.</p>
+
+    <div class="compare-grid">
+      <div class="compare-col before">
+        <div class="col-label">공로로서의 선행 (거부)</div>
+        <p>착하게 살았으니<br>하나님이 구원해줘야 한다<br><br>→ 구원의 <strong>근거</strong>로서의 행위</p>
+      </div>
+      <div class="compare-col after">
+        <div class="col-label">열매로서의 선행 (긍정)</div>
+        <p>구원받았기 때문에<br>감사로 착하게 산다<br><br>→ 구원의 <strong>증거·반응</strong>으로서의 행위</p>
+      </div>
+    </div>
+
+    <p>야고보서 2장의 "행함이 없는 믿음은 죽은 믿음"이라는 말은 선행이 구원을 만든다는 뜻이 아닙니다. <strong>진짜 믿음은 반드시 삶으로 드러난다</strong>는 뜻입니다. 열매는 나무를 만들지 않습니다. 나무가 먼저 있고, 열매는 그 나무가 살아있다는 증거입니다.</p>
+
+    <div class="callout info">
+      <span class="callout-icon">◈</span>
+      <div><strong>가톨릭과의 차이점</strong> — 가톨릭 신학은 은혜로 가능해진 인간의 행위에도 공로 가치를 인정합니다 (공로적 공로 / condigni). 개혁주의는 이것을 거부합니다. 은혜로 가능해진 행위조차, 그 행위 자체가 구원에 기여하는 공로가 될 수는 없다고 봅니다.</div>
+    </div>
+
+    <h3>한 줄로 정리</h3>
+
+    <div class="callout ok">
+      <span class="callout-icon">✦</span>
+      <div>공로 자체는 나쁜 개념이 아닙니다. <strong>그리스도의 공로는 구원의 전적인 근거</strong>이고, 우리의 선행은 그 구원에 반응하는 감사의 삶입니다. 문제는 공로가 아니라 <strong>공로의 주체를 잘못 놓는 것</strong>입니다.</div>
+    </div>
+  </section>
+
+  <!-- ── 결론 ── -->
+  <section class="conclusion-section" id="conclusion">
+    <div class="conclusion-title">— 최종 신학 결론 —</div>
+
+    <div class="summary-grid">
+      <div class="summary-card">
+        <div class="card-num">01</div>
+        <div class="card-title">낙원 = 중간 상태</div>
+        <div class="card-body">죽자마자 그리스도와 함께 있는 충만한 복락의 공간. 최종 부활 천국과 구별되지만, 하나님의 임재가 있는 실재하는 곳.</div>
+      </div>
+      <div class="summary-card">
+        <div class="card-num">02</div>
+        <div class="card-title">고백의 탁월함 = 은혜의 증거</div>
+        <div class="card-body">불가능한 타이밍의 고백은 강도의 공로가 아니라, 성령이 그 눈을 여셨다는 유효적 부르심의 증거다.</div>
+      </div>
+      <div class="summary-card">
+        <div class="card-num">03</div>
+        <div class="card-title">믿음 ≠ 공로</div>
+        <div class="card-body">믿음은 구원을 받는 통로이지 근거가 아니다. 믿음의 질도, 그 믿음 자체도 하나님의 선물이다 (엡 2:8).</div>
+      </div>
+    </div>
+
+      <div class="summary-card">
+        <div class="card-num">04</div>
+        <div class="card-title">공로의 주체가 핵심</div>
+        <div class="card-body">공로 개념 자체는 부정적이지 않다. 그리스도의 공로는 구원의 근거. 선행은 구원의 열매이지 근거가 아니다.</div>
+      </div>
+    </div>
+
+    <div class="theology-box">
+      <blockquote>
+        "그 강도의 고백이 감동적인 이유는 그의 공로 때문이 아닙니다.<br>
+        저 불가능한 타이밍에 일하신 하나님의 은혜가 더 빛나기 때문입니다.<br>
+        십자가 위에서 가장 초라해 보이던 그 순간,<br>
+        은혜는 가장 선명하게 완성됩니다."
+      </blockquote>
+      <cite>개혁주의 구원론 — Sola Gratia · Sola Fide · Solus Christus</cite>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <span>성경 질문·답변 시리즈</span>
+  <span>누가복음 23:43 · 개혁주의 신학</span>
+</footer>
+
+</body>
+</html>
